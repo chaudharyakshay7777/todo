@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
+import FirstComponent, { SecondComponent } from './components/learning-examples/FirstComponent'
 
 class App extends Component {
   render() {
@@ -8,19 +9,19 @@ class App extends Component {
       <div className="App">
         My Hello World
         <FirstComponent/>
+        <SecondComponent/>
+        <ThirdComponent/>
       </div>
     );
   }
 }
 
-class FirstComponent extends Component {
-  render() {
-    return (
-      <div className='firstComponent'>
-        FirstComponent
-      </div>
-    );
-  }
+//Function Component
+function ThirdComponent () {
+  return (
+  <div>
+    Third Component
+  </div>);
 }
 
 export default App;
